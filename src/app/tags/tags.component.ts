@@ -19,10 +19,11 @@ export class TagsComponent {
 
 
   constructor(private storage: StorageService){
-    storage.loadTags();
   }
+
+
   ngOnInit(): void {
-    this.storage.loadTags();
+    this.loadTags();
   }
 
   loadTags(): void {
@@ -46,16 +47,6 @@ export class TagsComponent {
         this.storage.deleteTag(tagToDelete);
         this.loadTags();
       }
-    }
-
-    handleEditEvent(): void {
-      this.editing = {
-        id: 1,
-        name: "name",
-        color: "#8800CC",
-      }
-  
-      //mettre à jour autres notes si depuis menu notes
     }
   
     handleEditConfirmEvent(): void {

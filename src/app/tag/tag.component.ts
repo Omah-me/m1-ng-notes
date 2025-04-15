@@ -10,5 +10,5 @@ import { Component ,input} from '@angular/core';
 export class TagComponent {
   id = input<number>(0);
   name = input<string>('Default tag');
-  color = input<string>('#888888');
+  color = input<string>('#00FFFF');
 }
